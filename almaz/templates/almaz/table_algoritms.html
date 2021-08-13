@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Django Forms</title>
+<!--    # таблица стилей css для table-->
+    <style type ="text/css">
+        .table_dark {
+          font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+          font-size: 14px;
+          width: 640px;
+          text-align: left;
+          border-collapse: collapse;
+          background: #252F48;
+          margin: 10px;
+        }
+        .table_dark th {
+          color: #EDB749;
+          border-bottom: 1px solid #37B5A5;
+          padding: 12px 17px;
+        }
+        .table_dark td {
+          color: #CAD4D6;
+          border-bottom: 1px solid #37B5A5;
+          border-right:1px solid #37B5A5;
+          padding: 7px 17px;
+        }
+        .table_dark tr:last-child td {
+          border-bottom: none;
+        }
+        .table_dark td:last-child {
+          border-right: none;
+        }
+        .table_dark tr:hover td {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h2 class="head_text">Matrix of Algorithms || </h2>
+<a href="http://12.23.24.25/hedge_martin/">Hedge_martin</a> &emsp;
+<a href="http://12.23.24.25/trade_extremum/">Trade_extremum</a> &emsp;
+<a href="http://12.23.24.25/global_levels/">Global_levels</a>
+<!--# первая таблица для алгоритма-->
+<table class="table_dark">
+  <tr>
+    <th>Name_of_algorithm</th>
+    <th>currency</th>
+    <th>parameter</th>
+    <th>value</th>
+    <th>last_data_update</th>
+    </tr>
+  <tr>
+    <td>{{ algorithm.1 }}</td>
+    <td>EURUSD</td>
+    <td>high_level</td>
+    <td>{{trade_extermum.high_level}}</td>
+    <td>{{trade_extermum.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.1 }}</td>
+    <td>EURUSD</td>
+    <td>low_level</td>
+    <td>{{trade_extermum.low_level}}</td>
+    <td>{{trade_extermum.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.1 }}</td>
+    <td>EURUSD</td>
+    <td>trend</td>
+    <td>{{trade_extermum.trend}}</td>
+    <td>{{trade_extermum.last_update}}</td>
+    </tr>
+  </table>
+
+<!--# Таблица № 2 для следующего алгоритма-->
+<br>
+<table class="table_dark">
+  <tr>
+    <th>Name_of_algorithm</th>
+    <th>currency</th>
+    <th>parameter</th>
+    <th>value</th>
+    <th>last_data_update</th>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>high_level</td>
+    <td>{{Hedge_Martin.high_level}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>low_level</td>
+    <td>{{Hedge_Martin.low_level}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>limit_order_type</td>
+    <td>{{Hedge_Martin.limit_order_type}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>stop_order_type</td>
+    <td>{{Hedge_Martin.stop_order_type}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>sell_stop_price</td>
+    <td>{{Hedge_Martin.sell_stop_price}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>buy_stop_price</td>
+    <td>{{Hedge_Martin.buy_stop_price}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>cascade</td>
+    <td>{{Last_update.cascade_orders}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step0</td>
+    <td>{{steps_list.0}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step1</td>
+    <td>{{steps_list.1}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step2</td>
+    <td>{{steps_list.2}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step3</td>
+    <td>{{steps_list.3}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step4</td>
+    <td>{{steps_list.4}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step5</td>
+    <td>{{steps_list.5}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+  <tr>
+    <td>{{ algorithm.0 }}</td>
+    <td>EURUSD</td>
+    <td>step6</td>
+    <td>{{steps_list.6}}</td>
+    <td>{{Last_update.last_update}}</td>
+    </tr>
+</table>
+
+<!--# Таблица № 3 для алгоритма Global_levels-->
+<table class="table_dark">
+  <tr>
+    <th>Name_of_algorithm</th>
+    <th>currency</th>
+    <th>high_level</th>
+    <th>low_level</th>
+    <th>stop_loss_pips</th>
+    <th>limit_order_type</th>
+    <th>stop_order_type</th>
+    <th>sell_stop_price</th>
+    <th>buy_stop_price</th>
+    <th>cascade_orders</th>
+    <th>close_orders</th>
+    <th>last_data_update</th>
+    </tr>
+  <tr>
+    <td>{{ algorithm.2 }}</td>
+    <td>{{ symbols_fx.0 }}</td>
+    {% for item in list_d_1 %} 
+    <td> {{ item }} </td>     
+    {% endfor %} 
+    <td>{{ dict_d.last_update }}</td>>
+    </tr>
+  <tr>
+    <td>{{ algorithm.2 }}</td>
+    <td>{{ symbols_fx.1 }}</td>
+    {% for item in list_d_2 %} 
+    <td> {{ item }} </td>     
+    {% endfor %} 
+    <td>{{ dict_d.last_update }}</td>>
+    </tr>
+  <tr>
+    <td>{{ algorithm.2 }}</td>
+    <td>{{ symbols_fx.2 }}</td>
+    {% for item in list_d_3 %} 
+    <td> {{ item }} </td>     
+    {% endfor %} 
+    <td>{{ dict_d.last_update }}</td>>
+    </tr>
+  <tr>
+    <td>{{ algorithm.2 }}</td>
+    <td>{{ symbols_fx.3 }}</td>
+    {% for item in list_d_4 %} 
+    <td> {{ item }} </td>     
+    {% endfor %} 
+    <td>{{ dict_d.last_update }}</td>>
+    </td>
+  </table>
+
+</body>
+</html>
